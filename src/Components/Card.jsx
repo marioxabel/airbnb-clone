@@ -1,5 +1,4 @@
 import React from 'react'
-import image from '../assets/katie-zaferes.png'
 import star from "../assets/star.png"
 /*
 Notes:
@@ -16,17 +15,18 @@ Notes:
   this data into the component.
 */
 
-export default function Card() {
+
+export default function Card(props) {
     return(
         <div className='card content'>
-            <img src={image} alt="katie" />
+            <img src={`./images/${props.img}`} alt="kaie" />
             <div className='card--review'>
                 <img src={star} alt='stars' />
-                <p className='rating'> 5.0 </p>
-                <p className='rating2'>(6) USA</p>
+                <p className='rating'> {props.rating}</p>
+                <p className='rating2'>({props.reviewCount}) {props.location}</p>
             </div>
-            <p className='title'>Life lessons with katie Zaferes</p>
-            <p><strong>From $136 / </strong> person</p>
+            <p className='title'>{props.title}</p>
+            <p><strong>From ${props.price} / </strong> person</p>
 
         </div>
     )

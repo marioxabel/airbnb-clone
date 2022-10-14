@@ -89,3 +89,10 @@ nav > img {
 .title {
   margin-top: 0px;
 }
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
