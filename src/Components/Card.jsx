@@ -32,7 +32,7 @@ export default function Card(props) {
             <div className='card--review'>
                 <img src={star} alt='stars' />
                 <p className='rating'> {props.element.stats.rating}</p>
-                <p className='rating2'>({props.element.stats.reviewCount}) {props.location}</p>
+                <p className='rating2'>({props.element.stats.reviewCount}) {props.element.location}</p>
             </div>
             <p className='title'>{props.element.title}</p>
             <p><strong>From ${props.element.price} / </strong> person</p>
